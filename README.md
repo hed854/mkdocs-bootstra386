@@ -6,7 +6,6 @@ This is a quick and dirty adaptation of [BOOTSTRA.386](https://github.com/kristo
 
 ## Todo
 
-* better h2
 * sub lists have no style
 * pygments ?
 * make search work again

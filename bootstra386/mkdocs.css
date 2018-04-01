@@ -6,8 +6,11 @@ h1 {
 }
 
 h2 {
-  padding: 10px 10px;
-  margin: 10px 0 10px;
+  padding: 9px 14px 9px 14px;
+  margin: 9px 4px 9px 4px;
+  font-size: 18px;
+  color: #a00;
+  border: 2px solid #bbbbbb;
 }
 
 .span9 > ul > li {
