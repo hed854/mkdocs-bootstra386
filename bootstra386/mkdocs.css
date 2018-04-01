@@ -1,0 +1,36 @@
+h1 {
+  color: #000000;
+  padding: 20px 20px;
+  margin: 25px 0 20px;
+  background: #00aaaa;
+}
+
+h2 {
+  padding: 10px 10px;
+  margin: 10px 0 10px;
+}
+
+.span9 > ul > li {
+  list-style: square;
+}
+
+.nav > li > a::first-letter {
+  color: #a00;
+}
+
+.bs-sidenav > li > a::first-letter {
+  color: #fefe54;
+}
+
+.bs-sidenav {
+  min-height: 20px;
+  padding: 19px 10px;
+  margin-bototm: 19px;
+  color: #fff;
+  background-color: #0a0;
+}
+
+.dropdown-menu {
+  margin-top: 10px;
+}
+

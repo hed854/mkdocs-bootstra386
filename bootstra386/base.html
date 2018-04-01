@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {%- block site_meta %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% if config.site_description %}<meta name="description" content="{{ config.site_description }}">{% endif %}
+        {% if config.site_author %}<meta name="author" content="{{ config.site_author }}">{% endif %}
+        {% if page.canonical_url %}<link rel="canonical" href="{{ page.canonical_url }}">{% endif %}
+        <link rel="shortcut icon" href="{{ base_url }}/img/favicon.ico">
+        {%- endblock %}
+
+        {%- block htmltitle %}
+        <title>{% if page and page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
+        {%- endblock %}
+
+        {%- block styles %}
+        <link href="{{ base_url }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{ base_url }}/mkdocs.css" rel="stylesheet">
+        {%- for path in extra_css %}
+        <link href="{{ path }}" rel="stylesheet">
+        {%- endfor %}
+        {%- endblock %}
+
+        {%- block libs %}
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- wtf jquery 1 -->
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="{{ base_url }}/bootstrap/js/bootstrap.js"></script>
+        {%- endblock %}
+
+        {%- block extrahead %} {% endblock %}
+    </head>
+
+    <body>
+
+        {% include "nav.html" %}
+
+        <div class="container">
+            {%- block content %}
+                <div class="row">
+                    <div class="span3 bs-sidebar">{% include "toc.html" %}</div>
+                    <div class="span9">{% include "content.html" %}</div>
+                </div>
+            {%- endblock %}
+        </div>
+
+    <hr>
+    <footer class="container">
+
+        {%- block footer %}
+        {% if config.copyright %}
+        <center>{{ config.copyright }}</center>
+        {% endif %}
+        <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        {%- endblock %}
+    </footer>
+
+        {%- block scripts %}
+        {%- for path in extra_javascript %}
+        <script src="{{ path }}"></script>
+        {%- endfor %}
+        {%- endblock %}
+    </body>
+</html>
