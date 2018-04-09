@@ -6,7 +6,8 @@ This is a quick and dirty adaptation of [BOOTSTRA.386](https://github.com/kristo
 
 ## Todo
 
-* sub lists have no style
+* repsonsiveness (note: the project uses Bootstrap 2, thus `bootstrap-responsive.css`, might need to upgrade)
+* add example website in the project
 * pygments ?
 * make search work again
 * make pip package ([instructions](http://www.mkdocs.org/user-guide/custom-themes/#packaging-themes))

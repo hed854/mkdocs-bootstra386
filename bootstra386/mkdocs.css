@@ -17,6 +17,14 @@ h2 {
   list-style: square;
 }
 
+.span9 > ul > li > ul {
+  padding-bottom: 14px;
+}
+
+.span9 > ul > li > ul > li {
+  list-style: square inside;
+}
+
 .nav > li > a::first-letter {
   color: #a00;
 }
